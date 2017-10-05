@@ -100,7 +100,9 @@ CHEMIN_DOSSIER_CONTENEUR_PROJETS="/mnt/c/Users/Eurelis/Documents/Tanguy"
 # Ci-dessous : Modèle des variables à initialiser :
 # NOM_BDD="bdd_de_monprojet"
 # NOM_DOSSIER_PROJET="_Mon-Dossier-Projet"
-# NOM_FICHIER_DUMP_SQL="dump-monprojet_20160519.sql"
+# NOM_FICHIER_DUMP_SQL="monprojet.sql"
+# Le script sauvegardera le dump automatiquement
+# dans le dossier _Mon-Dossier-Projet/backups_mysql sous le nom : dump_05.10.17@17h54.tar.gz
 # ##########
 
 # NOM_BDD="d8tuto_prod"
