@@ -103,7 +103,8 @@ CHEMIN_DOSSIER_CONTENEUR_PROJETS="/mnt/c/Users/Eurelis/Documents/Tanguy"
 # NOM_FICHIER_DUMP_SQL="monprojet.sql"
 # Le script sauvegardera le dump automatiquement
 # dans le dossier _Mon-Dossier-Projet/backups_mysql sous le nom : dump_05.10.17@17h54.tar.gz
-# ##########
+# ########## CI-DESSOUS DECOMMENTER LES 3 LIGNES DU PROJET QUE VOUS VOULEZ UTILISER ########
+
 
 # NOM_BDD="d8tuto_prod"
 # NOM_DOSSIER_PROJET="_D8Tuto-Prod"
