@@ -1,6 +1,6 @@
 #!/bin/bash
 # Author : Tanguy Bodin-Hullin <tanguybh2@hotmail.com>
-# Last version : 19 oct 2016
+# Last version : 05 oct 2017
 # Ce script permet de charger un fichier de dump dans une base de données MySQL
 # après affichage d'un message de confirmation
 # Avant le chargement, le script effectue une sauvegarde automatique de la base courante
@@ -95,55 +95,13 @@ THIS_SCRIPT="$execPath/charge_bdd_linux.sh"
 CHEMIN_DOSSIER_CONTENEUR_PROJETS="/mnt/c/Users/Eurelis/Documents/Tanguy"
 
 # ########## PARAMETRAGES SPECIFIQUES #####################
+# Ces paramètres sont à changer à chaque fois que l'on change de projet
 # ATTENTION : Eviter les tirets du 6 dans le nom de la BDD ! (sinon le script ne fonctionne pas bien) 
-
-# NOM_BDD="arte_autographe"
-# NOM_DOSSIER_PROJET="_Arte-Autographe"
-# NOM_FICHIER_DUMP_SQL="dump-autographe-20160503-113155.sql"
-
-# NOM_BDD="tv5-voyage"
-# NOM_DOSSIER_PROJET="_TV5Monde-Voyage"
-# NOM_FICHIER_DUMP_SQL="dump-tv5-voyage_20160519.sql"
-
-# NOM_BDD="federationchaussure"
-# NOM_DOSSIER_PROJET="_FFC"
-# NOM_FICHIER_DUMP_SQL="2016-03-10_dump_federation-chaussure.sql"
-
-# NOM_BDD="espace_locataire"
-# NOM_DOSSIER_PROJET="_Polylogis/Espace_Locataire"
-# NOM_FICHIER_DUMP_SQL="espace_locataire.sql"
-
-# NOM_BDD="drupal7test"
-# NOM_DOSSIER_PROJET="_D7Test"
-# NOM_FICHIER_DUMP_SQL="d7test.sql"
-
-# NOM_BDD="jeunesse"
-# NOM_DOSSIER_PROJET="_TV5Monde-EspaceJeunesse"
-# NOM_FICHIER_DUMP_SQL="jeunesse.sql"
-
-NOM_BDD="maisondelaradio"
-NOM_DOSSIER_PROJET="_MaisonDeLaRadio"
-NOM_FICHIER_DUMP_SQL="mdlr.sql"
-
-#NOM_BDD="parisax"
-#NOM_DOSSIER_PROJET="_ParisAX"
-#NOM_FICHIER_DUMP_SQL="parisax.sql"
-
-#NOM_BDD="eurelis"
-#NOM_DOSSIER_PROJET="_Eurelis-Corporate"
-#NOM_FICHIER_DUMP_SQL="eurelis.sql"
-
-#NOM_BDD="touzet"
-#NOM_DOSSIER_PROJET="_Touzet-SiteCorporate"
-#NOM_FICHIER_DUMP_SQL="touzet.sql"
-
-#NOM_BDD="dictee"
-#NOM_DOSSIER_PROJET="_TV5Monde-LaDictee"
-#NOM_FICHIER_DUMP_SQL="dictee.sql"
-
-# NOM_BDD="citroenorigins"
-# NOM_DOSSIER_PROJET="_Citroen-Origins"
-# NOM_FICHIER_DUMP_SQL="co.sql"
+# Ci-dessous : Modèle des variables à initialiser :
+# NOM_BDD="bdd_de_monprojet"
+# NOM_DOSSIER_PROJET="_Mon-Dossier-Projet"
+# NOM_FICHIER_DUMP_SQL="dump-monprojet_20160519.sql"
+# ##########
 
 # NOM_BDD="d8tuto_prod"
 # NOM_DOSSIER_PROJET="_D8Tuto-Prod"
