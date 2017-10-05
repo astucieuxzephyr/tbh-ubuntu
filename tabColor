@@ -1,0 +1,63 @@
+#!/bin/bash
+
+# Texte de l'exemple ( >= 3 caractères ) :
+TEXT=" Bash " ;
+
+# Couleur du texte :
+declare -a FG=('' '1' '4' '5' '7' '30' '31' '32' \
+'33' '34' '35' '36' '37') ;
+
+echo 
+
+# Premiere ligne :
+printf "FG \ BG\t%${#TEXT}s" ;
+for bg in {40..47} ; do
+printf "%${#TEXT}s" "${bg}  " ;
+done
+echo ;
+
+# Création du tableau de prsentation des combinaisons :
+for fg in ${!FG[*]} ; do
+echo -ne "${FG[fg]}\t\033[${FG[fg]}m$TEXT" ;
+for bg in {40..47} ; do
+echo -ne "\033[${FG[fg]};${bg}m$TEXT\033[0m" ;
+done
+echo ;
+done
+
+#
+# generates an 8 bit color table (256 colors) for
+# reference purposes, using the \033[48;5;${val}m
+# ANSI CSI+SGR (see "ANSI Code" on Wikipedia)
+#
+echo -en "\n   +  "
+for i in {0..35}; do
+  printf "%2b " $i
+done
+
+printf "\n\n %3b  " 0
+for i in {0..15}; do
+  echo -en "\033[48;5;${i}m  \033[m "
+done
+
+#for i in 16 52 88 124 160 196 232; do
+for i in {0..6}; do
+  let "i = i*36 +16"
+  printf "\n\n %3b  " $i
+  for j in {0..35}; do
+    let "val = i+j"
+    echo -en "\033[48;5;${val}m  \033[m "
+  done
+done
+
+echo -e "\n"
+
+# Comment dclarer une couleur :
+cat <<_eof_
+
+ Format de dclaration : \\033[XXm o XX prend les valeurs 
+       de FG ou BG" ;
+ Retour aux param¨tres par dfaut : \033[0m" ;
+ Pour plus de dtails : http://www.admin-linux.fr/?p=9011
+
+_eof_
