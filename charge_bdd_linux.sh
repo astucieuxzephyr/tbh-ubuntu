@@ -60,7 +60,7 @@ fi
 fi
 
         # Nom de la sauvegarde
-        BACKUP_DUMP_NAME="dump_$PREFIXE_SAUVEGARDE_$(date +%d.%m.%y@%Hh%M)"
+        BACKUP_DUMP_NAME="dump_$1_$(date +%d.%m.%y@%Hh%M)"
         # Compression
             COMPRESSIONCMD="tar -czf" 
             COMPRESSIONEXT=".tar.gz"
@@ -107,6 +107,11 @@ CHEMIN_DOSSIER_CONTENEUR_PROJETS="/mnt/c/Users/Eurelis/Documents/Tanguy"
 # sous le nom : dump_{PREFIXE_SAUVEGARDE}_JJ.MM.AA@HHhmm.tar.gz
 # Par exemple dump_monprojet_05.10.17@17h54.tar.gz
 # ########## CI-DESSOUS DECOMMENTER LES 4 LIGNES DU PROJET QUE VOUS VOULEZ UTILISER ########
+
+NOM_BDD="bdd_de_monprojet"
+NOM_DOSSIER_PROJET="_Mon-Dossier-Projet"
+NOM_FICHIER_DUMP_SQL="monprojet.sql"
+PREFIXE_SAUVEGARDE="monprojet"
 
 # NOM_BDD="d8tuto_prod"
 # NOM_DOSSIER_PROJET="_D8Tuto-Prod"
@@ -167,7 +172,7 @@ if ! mysql $IDENTIFICATION_MYSQL -e "use $NOM_BDD"; then
 else
    # Si la base existe on crée une sauvegarde automatiquement, puis on vide les tables
     green "The database $NOM_BDD does exist !"
-savedatabase
+savedatabase $PREFIXE_SAUVEGARDE
 
 ###
 
@@ -204,7 +209,7 @@ fi
 
 else
 # PROPOSITION DE SAUVER LA BASE
-    savedatabase
+    savedatabase $PREFIXE_SAUVEGARDE
 blue "Vous pouvez editer $THIS_SCRIPT pour modifier les parametres du projet (nom bdd, etc), et relancer la commande charge."
 fi
 cd "$currentPath"
