@@ -60,7 +60,7 @@ fi
 fi
 
         # Nom de la sauvegarde
-        BACKUP_DUMP_NAME="dump_$(date +%d.%m.%y@%Hh%M)"
+        BACKUP_DUMP_NAME="dump_$PREFIXE_SAUVEGARDE_$(date +%d.%m.%y@%Hh%M)"
         # Compression
             COMPRESSIONCMD="tar -czf" 
             COMPRESSIONEXT=".tar.gz"
@@ -97,30 +97,35 @@ CHEMIN_DOSSIER_CONTENEUR_PROJETS="/mnt/c/Users/Eurelis/Documents/Tanguy"
 # ########## PARAMETRAGES SPECIFIQUES #####################
 # Ces paramètres sont à changer à chaque fois que l'on change de projet
 # ATTENTION : Eviter les tirets du 6 dans le nom de la BDD ! (sinon le script ne fonctionne pas bien) 
-# Ci-dessous : Modèle des variables à initialiser :
+# Ci-dessous : Modèle des 4 variables à initialiser :
 # NOM_BDD="bdd_de_monprojet"
 # NOM_DOSSIER_PROJET="_Mon-Dossier-Projet"
 # NOM_FICHIER_DUMP_SQL="monprojet.sql"
-# Le script sauvegardera le dump automatiquement
-# dans le dossier _Mon-Dossier-Projet/backups_mysql sous le nom : dump_05.10.17@17h54.tar.gz
-# ########## CI-DESSOUS DECOMMENTER LES 3 LIGNES DU PROJET QUE VOUS VOULEZ UTILISER ########
+# PREFIXE_SAUVEGARDE="monprojet" <== Ce préfixe peut être vide
 
+# Le script sauvegardera le dump automatiquement dans le dossier _Mon-Dossier-Projet/backups_mysql/
+# sous le nom : dump_{PREFIXE_SAUVEGARDE}_JJ.MM.AA@HHhmm.tar.gz
+# Par exemple dump_monprojet_05.10.17@17h54.tar.gz
+# ########## CI-DESSOUS DECOMMENTER LES 4 LIGNES DU PROJET QUE VOUS VOULEZ UTILISER ########
 
 # NOM_BDD="d8tuto_prod"
 # NOM_DOSSIER_PROJET="_D8Tuto-Prod"
 # NOM_FICHIER_DUMP_SQL="d8tuto_prod_ori.sql"
+# PREFIXE_SAUVEGARDE="d8tutoprod"
 
 # NOM_BDD="d8tuto_dev"
 # NOM_DOSSIER_PROJET="_D8Tuto-Dev"
 # NOM_FICHIER_DUMP_SQL="d8tuto_dev_ori.sql"
+# PREFIXE_SAUVEGARDE="d8tutodev"
 
 # NOM_BDD="d8test"
 # NOM_DOSSIER_PROJET="_D8Test"
 # NOM_FICHIER_DUMP_SQL="d8test_ori.sql"
+# PREFIXE_SAUVEGARDE="d8test"
 
 # ########## A PARTIR D'ICI NE PAS TOUCHER ###################
 
-# Vérifie que leservice mysql est lancé
+# Vérifie que le service mysql est lancé
 MYSQL_UP=$(pgrep mysql | wc -l);
 if [ "$MYSQL_UP" -eq 0 ];
 then
