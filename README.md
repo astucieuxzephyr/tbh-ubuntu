@@ -8,5 +8,7 @@ Fichiers de config de base pour Ubuntu sous Windows
 ## Pour récupérer ce projet sur votre PC (sous Ubuntu pour Windows) :
 Lancer le bash Ubuntu, et faire :
 
-    cd ~
-    git clone https://github.com/astucieuxzephyr/tbh-ubuntu ~
+    $ cd ~
+    $ git init .
+    $ git remote add -f origin https://github.com/astucieuxzephyr/tbh-ubuntu
+    $ git checkout master
