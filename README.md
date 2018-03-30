@@ -1,12 +1,14 @@
 # tbh-ubuntu
-Fichiers de config de base pour Ubuntu sous Windows
------------------------------------------------------
+Ensemble de fichiers de configuration de base permettant de paramétrer Ubuntu sous Windows de façon opérationnelle rapidement.
 
 ## Rappels :
-- Sous Ubuntu pour Windows, ces fichiers doivent se trouver dans le dossier \mnt\c\Users\NomUtilisateur\\
+- Dans Ubuntu sous Windows, ces fichiers doivent se trouver dans le dossier \mnt\c\Users\NomUtilisateur\\
+- Au préalable, git doit avoir été installé (commande `sudo apt-get install git`) et configuré.
 
 ## Pour récupérer ce projet sur votre PC (sous Ubuntu pour Windows) :
 Lancer le bash Ubuntu, et faire :
 
-    cd ~
-    git clone https://github.com/astucieuxzephyr/tbh-ubuntu ~
+    $ cd ~
+    $ git init .
+    $ git remote add -f origin https://github.com/astucieuxzephyr/tbh-ubuntu
+    $ git pull origin master
