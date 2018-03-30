@@ -1,4 +1,4 @@
-# fichier .bash_aliases (est appele par le fichier .bashrc)
+# Fichier .bash_aliases (est appelé par le fichier .bashrc)
 # ========================================
 # 1 pour le gras, 0 pour le normal
 VERT="\\033[1;32m"
@@ -35,13 +35,13 @@ echo -e "$VERT_ON_MARRON""##### ""$ORANGE_ON_TAN""UBUNTU pour Windows 10""$VERT"
 # ============= ALIAS DES SITES =================
 MNT="/mnt"
 
-alias godemod7="cd ""$MNT""/c/wamp/www/Demo-D7/www"
-alias godemod7theme="cd ""$MNT""/c/wamp/www/Demo-D7/www/sites/all/themes/custom/demod7"
-echo -e "$VERT""==> alias ""$BLEU""godemod7 godemod7theme""$NORMAL""........""$OK"
+# alias godemod7="cd ""$MNT""/c/wamp/www/Demo-D7/www"
+# alias godemod7theme="cd ""$MNT""/c/wamp/www/Demo-D7/www/sites/all/themes/custom/demod7"
+# echo -e "$VERT""==> alias ""$BLEU""godemod7 godemod7theme""$NORMAL""........""$OK"
 
-alias gotango="cd ""$MNT""/c/wamp/www/Tango-Site/drupal/www"
-alias gotangotheme="cd ""$MNT""/c/wamp/www/Tango-Site/drupal/www/themes/custom/tango_theme"
-echo -e "$VERT""==> alias ""$BLEU""gotango gotangotheme""$NORMAL""........""$OK"
+# alias gotango="cd ""$MNT""/c/wamp/www/Tango-Site/drupal/www"
+# alias gotangotheme="cd ""$MNT""/c/wamp/www/Tango-Site/drupal/www/themes/custom/tango_theme"
+# echo -e "$VERT""==> alias ""$BLEU""gotango gotangotheme""$NORMAL""........""$OK"
 
 # ======= ALIASES POUR D8 ========
 
@@ -49,14 +49,13 @@ alias god8test="cd ""$MNT""/c/wamp/www/drupal8"
 alias god8testtheme="cd ""$MNT""/c/wamp/www/drupal8/themes/bootstrap"
 echo -e "$VERT""==> alias ""$BLEU""god8test god8testtheme""$NORMAL""........""$OK"
 
-alias god8tutodev="cd ""$MNT""/c/wamp/www/drupal8tutodev"
-alias god8tutodevtheme="cd ""$MNT""/c/wamp/www/drupal8tutodev/themes/bootstrap"
-echo -e "$VERT""==> alias ""$BLEU""god8tutodev god8tutodevtheme""$NORMAL""........""$OK"
+# alias god8tutodev="cd ""$MNT""/c/wamp/www/drupal8tutodev"
+# alias god8tutodevtheme="cd ""$MNT""/c/wamp/www/drupal8tutodev/themes/bootstrap"
+# echo -e "$VERT""==> alias ""$BLEU""god8tutodev god8tutodevtheme""$NORMAL""........""$OK"
 
-alias god8tutoprod="cd ""$MNT""/c/wamp/www/drupal8tutoprod"
-alias god8tutoprodtheme="cd ""$MNT""/c/wamp/www/drupal8tutoprod/themes/bootstrap"
-echo -e "$VERT""==> alias ""$BLEU""god8tutoprod god8tutoprodtheme""$NORMAL""........""$OK"
-
+# alias god8tutoprod="cd ""$MNT""/c/wamp/www/drupal8tutoprod"
+# alias god8tutoprodtheme="cd ""$MNT""/c/wamp/www/drupal8tutoprod/themes/bootstrap"
+# echo -e "$VERT""==> alias ""$BLEU""god8tutoprod god8tutoprodtheme""$NORMAL""........""$OK"
 
 # ==============================
 # Aliases generiques
@@ -71,7 +70,7 @@ echo -e "$VERT""==> alias ""$BLEU""aide / editaide / show / clear / ll / more ""
 alias tobin='cd /usr/local/bin/'
 echo -e "$VERT""==> alias ""$BLEU""tobin""$NORMAL"" = ""$ROSE""c:/user/local/bin""$NORMAL"" .............""$OK"
 
-# Aliases des dossiers des serveurs Web (WAMP, WTserver)
+# Aliases des dossiers des Serveurs Web (WAMP, WTserver)
 alias www='cd /mnt/c/wamp/www/'
 alias WWW='cd /mnt/c/WTServer/WWW/'
 echo -e "$VERT""==> alias ""$BLEU""www""$NORMAL"" = ""$ROSE""/mnt/c/wamp/www""$NORMAL"" .............""$OK"
@@ -96,7 +95,7 @@ lampfunc(){
  elif [ $# -eq 1 -a $1 = "off" ]; then
      echo -e "$ROUGE""==> lamp off : Extinction des services Apache2 et MySQL""$NORMAL"
      service apache2 stop
-     service mysql stop 
+     service mysql stop
  else
      echo -e "$BLEU""==> Statut des services LAMP (MySQL / Apache2) :""$NORMAL"
      service apache2 status
@@ -135,7 +134,7 @@ vlogs(){
     
     # Ci-dessous mettre les differentes valeurs des noms de projets
     stop=0
-    for param in ${NOMS_PROJETS[@]} 
+    for param in ${NOMS_PROJETS[@]}
     do
        if [ "$stop" -eq 0 -a "$1" = "$param" ]; then
           
@@ -188,7 +187,7 @@ echo -e "$VERT""==> alias editconfigapache""$NORMAL"" : Edite la conf Apache2 av
 alias editconfigapache='vi /etc/apache2/sites-enabled/000-default.conf'
 
 ##### DRUPAL CONSOLE (D8) #####
-# alias pour drupal console (necessite que drupal console soit installee)
+# alias pour drupal console (nécessite que drupal console soit installee)
 alias dcr='drupal cache:rebuild'
 alias dcra='drupal cache:rebuild all'
 
