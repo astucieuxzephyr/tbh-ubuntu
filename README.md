@@ -13,6 +13,9 @@ Lancer le bash Ubuntu, et faire :
     $ git remote add -f origin https://github.com/astucieuxzephyr/tbh-ubuntu
     $ git pull origin master
 
+Note : Il n'y a pas de risque d'écraser vos fichiers existants, parce que si un fichier du même nom existait déjà,
+la commande "git pull" serait interrompue automatiquement par sécurité avec un message d'erreur.
+
 ## Sauvegarder et activer les nouveaux fichiers :
 Sauvegardez l'ancien fichier .bashrc s'il existe :
 On ajoute "_ORI" à la fin du nom du fichier pour garder une trace du fichier original
