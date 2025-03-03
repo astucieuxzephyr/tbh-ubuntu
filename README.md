@@ -14,13 +14,21 @@ Lancer le bash Ubuntu, et faire :
     $ git pull origin master
 
 ## Sauvegarder et activer les nouveaux fichiers :
-1. Sauvegardez l'ancien fichier .bashrc s'il existe :
-   On ajoute "_ORI" à la fin du nom du fichier pour garder une trace du fichier original
+Sauvegardez l'ancien fichier .bashrc s'il existe :
+On ajoute "_ORI" à la fin du nom du fichier pour garder une trace du fichier original
+   
     $ mv .bashrc .bashrc_ORI
-2. Renommez le fichier .bashrc_off en .bashrc afin d'activer le nouveau fichier :
-    $ mv .bashrc_off .bashrc
-3. Relancez la console Ubuntu
+   
+Renommez le fichier .bashrc_off en .bashrc afin d'activer le nouveau fichier :
 
-## Note :
-Le fichier .bashrc_profile_off sert de référence, mais normalement il n'a pas besoin d'être activé.
-C'est le fichier .profile original d'Ubuntu qui appelle le fichier .bashrc
+    $ mv .bashrc_off .bashrc
+   
+Enfin, Relancez la console Ubuntu
+
+## Remarques :
+Le fichier .bashrc_profile_off a été mis ici comme référence (pour un ancien système), mais normalement il n'a pas besoin d'être activé et peut même être effacé.
+C'est le fichier ~/.profile original d'Ubuntu qui appelle normalement le fichier .bashrc
+Si ~/.bash_profile est présent, Bash le charge au lieu de ~/.profile, ce qui peut empêcher l’exécution de .bashrc.
+D'où l'importance de désactiver le fichier ~/.bash_profile
+
+
