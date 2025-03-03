@@ -26,9 +26,9 @@ Renommez le fichier .bashrc_off en .bashrc afin d'activer le nouveau fichier :
 Enfin, Relancez la console Ubuntu
 
 ## Remarques :
-Le fichier .bashrc_profile_off a été mis ici comme référence (pour un ancien système), mais normalement il n'a pas besoin d'être activé et peut même être effacé.
-C'est le fichier ~/.profile original d'Ubuntu qui appelle normalement le fichier .bashrc
-Si ~/.bash_profile est présent, Bash le charge au lieu de ~/.profile, ce qui peut empêcher l’exécution de .bashrc.
-D'où l'importance de désactiver le fichier ~/.bash_profile
+- Le fichier .bashrc_profile_off a été mis ici comme référence (pour un ancien système), mais normalement il n'a pas besoin d'être activé et peut même être effacé.
+- C'est le fichier ~/.profile original d'Ubuntu qui appelle normalement le fichier .bashrc
+- Si ~/.bash_profile est présent, Bash le charge au lieu de ~/.profile, ce qui peut empêcher l’exécution de .bashrc.
+- D'où l'importance de désactiver le fichier ~/.bash_profile
 
 
